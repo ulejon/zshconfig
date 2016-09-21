@@ -24,14 +24,14 @@ function chvgtpwd() {
 	perl -pi -e "s/${OLD_PWD}/${NEW_PWD}/g" ${PROXY_AUTH}
 	
 
-	CONF_FILE=~/repos/zshconfig/zz_2_vgt.zsh
+	PWD_FILE=~/.vgt_pwd
 	
-	if [ ! -f "${CONF_FILE}" ]; then
-		echo "Config file for env variable does not exist..exiting"
+	if [ ! -f "${PWD_FILE}" ]; then
+		echo "Password file does not exist..exiting"
 		return
 	fi
 
-	perl -pi -e "s/${OLD_PWD}/${NEW_PWD}/g" ${CONF_FILE}	
+	perl -pi -e "s/${OLD_PWD}/${NEW_PWD}/g" ${PWD_FILE}	
 
 
 

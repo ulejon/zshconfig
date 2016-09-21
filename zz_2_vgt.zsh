@@ -1,4 +1,8 @@
-export VGT_PWD=Lolwag53
+function vgtpwd { 
+	value=$(<~/.vgt_pwd)
+	export VGT_PWD="$value"
+}
+vgtpwd
 
 export SOURCES_ROOT=~/source/
 
