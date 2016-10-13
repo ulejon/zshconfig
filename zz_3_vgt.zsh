@@ -28,6 +28,30 @@ function chvgtpwd() {
 	fi
 
 	perl -pi -e "s/${OLD_PWD}/${NEW_PWD}/g" ${PROXY_AUTH}
+
+	#######################################################
+	# Update proxy settings for maven
+	#######################################################
+	M2_SETTINGS=~/.m2/settings.xml
+	
+	if [ ! -f "${M2_SETTINGS}" ]; then
+		echo "Maven settings file does not exist..exiting"
+		return
+	fi
+
+	perl -pi -e "s/${OLD_PWD}/${NEW_PWD}/g" ${M2_SETTINGS}
+
+	#######################################################
+	# Update proxy settings for gradle
+	#######################################################
+	GRADLE_SETTINGS=~/.gradle/gradle.properties
+	
+	if [ ! -f "${GRADLE_SETTINGS}" ]; then
+		echo "Gradle settings file does not exist..exiting"
+		return
+	fi
+
+	perl -pi -e "s/${OLD_PWD}/${NEW_PWD}/g" ${GRADLE_SETTINGS}
 	
 
 	#######################################################
