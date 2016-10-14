@@ -73,6 +73,12 @@ function chvgtpwd() {
 	gsettings set org.gnome.system.proxy.http host http://a227645:${NEW_PWD}@httppxgot.srv.volvo.com
 	gsettings set org.gnome.system.proxy.https host http://a227645:${NEW_PWD}@httppxgot.srv.volvo.com
 
+	#######################################################
+	# Update npm proxy settings
+	#######################################################
+	npm config set proxy http://a227645:${NEW_PWD}@httppxgot.srv.volvo.com:8080
+	npm config set https-proxy http://a227645:${NEW_PWD}@httppxgot.srv.volvo.com:8080
+
 
 	######################################################
 	# Source the new changes
