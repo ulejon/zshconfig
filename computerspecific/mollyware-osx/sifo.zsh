@@ -1,3 +1,5 @@
+export SAMBERA_STORAGE="=$HOME/Documents/sifo/field-report-storage"
+
 # Tag image for production release
 function prod() {
   TAG=${2:-latest}
