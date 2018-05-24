@@ -1,2 +1,2 @@
 export NVM_DIR="$HOME/.nvm"
-source '/usr/local/opt/nvm/nvm.sh'
+alias loadnvm='[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"'
