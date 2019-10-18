@@ -1,7 +1,7 @@
 export SAMBERA_STORAGE="=$HOME/Documents/sifo/field-report-storage"
 export SAMBERA_PANEL_SQS_PANELLIST_ACTIVITY=https://sqs.eu-west-1.amazonaws.com/569128858329/sqs-panellist-activity-dev-lejonu
 export SAMBERA_PANEL_SQS_PANELLIST_TO_TERMINATE=https://sqs.eu-west-1.amazonaws.com/569128858329/sqs-panellist-to-terminate-dev-lejonu
-export SAMBERA_PANEL_SQS_IPMS_PANELLIST_PANEL_TRANSITIONS=https://sqs.eu-west-1.amazonaws.com/569128858329/sqs-ipms-panellist-panel-transitions-dev-lejonu
+export SAMBERA_PANEL_SQS_IPMS_PANELLIST_PANEL_MEMBERSHIPS=https://sqs.eu-west-1.amazonaws.com/569128858329/sqs-ipms-panellist-panel-memberships-dev-lejonu
 
 
 # Tag image for production release
